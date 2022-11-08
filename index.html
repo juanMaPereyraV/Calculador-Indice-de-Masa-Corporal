@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Indicador de Masa Corporal</title>
+</head>
+<body>
+    <h1>Calculador de Masa Corporal</h1>
+    <form class="form" id="formulario" onsubmit="CalcularIMC(); return false">
+    <label for="sexo">Indique su genero "h" si eres Hombre y "m" si eres mujer</label>
+    <input type="text" id="sexo">
+    <label for="altura">Escribe tu ALTURA actual (cm):</label>
+    <input type="text" id="altura">
+    <label for="peso">Escribe tu PESO actual (kg):</label>
+    <input type="text" id="peso">
+    </form>
+    <button class="boton" onclick="MostrarResultadoIMC();"> CALCULAR</button>
+    
+    <script src="js/db.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

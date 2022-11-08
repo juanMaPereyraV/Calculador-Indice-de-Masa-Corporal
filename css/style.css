@@ -32,6 +32,7 @@ input{
     font-size: 35px;
     border-radius: 13pc;
     text-align: center;
+    border: 4px inset seagreen;
 }
 .boton{
     width: 229px;
@@ -44,4 +45,5 @@ input{
     font-family: system-ui;
     font-weight: bold;
     margin-top: 32px;
+    border: 4px inset seagreen;
 }

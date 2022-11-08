@@ -1,0 +1,23 @@
+body{
+    background-color: aquamarine;
+}
+
+h1{
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    width: 223px;
+    text-align: center;
+    padding: 33px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: auto;
+    box-sizing: border-box;
+}
+.boton{
+    margin: auto;
+    display: flex;
+}

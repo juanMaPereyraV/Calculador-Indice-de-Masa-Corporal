@@ -1,9 +1,14 @@
            
       
-      //Petición de datos al usuario (sexo, altura, peso)
-       let sexo = prompt("Indique su sexo, una 'h' para hombre o una 'm' para mujer:", "");
-       let altura = Number(prompt("Indique su altura en centímetros:", ""));
-      let peso = Number(prompt("Indique su pespeso en kilógramos:", ""));
+     
+            //Petición de datos al usuario (sexo, altura, peso)
+            
+            
+  
+
+           
+            
+            
             //Función para calcular el índice de masa corporal (IMC)
             function CalcularIMC(sexo, altura, peso) 
             {
@@ -91,8 +96,54 @@
             // metodo de filter para ver si hay parametros dentro del objeto para
             const filtrado = resultadosIMG.filter (leyenda => leyenda.frase == ("Obesidad."))
             console.log (filtrado)
+
+            //-----------------------------APLICACION DE DOM EN CARD DE BOOSTRAP--------------------------------------------------------
+
+            let card = document.getElementById ("nuevocontenido")
+            card.classList.add ("card")
             
 
+            let img = document.createElement ("img")
+            img.src = "https://media.revistagq.com/photos/62d548092a93146f28bd2102/1:1/w_1600%2Cc_limit/GettyImages-1131209118%2520(2).jpg"
+            
+            let cardBody = document.createElement ("div")
+            cardBody.className = "card-body"
+
+            let h5 = document.createElement ("h5")
+            h5.textContent = "Subtitulo"
+            let p = document.createElement ("p")
+            p.textContent = "Texto Descriptivo"
+            let a = document.createElement ("a")
+            a.textContent = "Ver mas"
+            a.href = "https://www.dietascormillot.com/formulario_alianzas.asp?alianza=2081&descripcion=G&gclid=CjwKCAiApvebBhAvEiwAe7mHSAbN4a9WqIJJzYBTr71hGTarV2obw3eGG03KQQH5rRvRVRt0JMrkTRoCIrgQAvD_BwE"
+
+            cardBody.appendChild (h5)
+            cardBody.appendChild (p)
+            cardBody.appendChild (a)
+
+            card.appendChild (img)
+            card.appendChild (cardBody)
+
+            //-------------------------- APLICAR EVENTOS------------------------
+
+            //Agregar clase a un elemento --Switch Color Mode
+            const colorModeButton = document.querySelector ("#color-mode");
+            const body = document.body;
+
+            colorModeButton.addEventListener ("click", cambiarModoColor);
+
+            //Funcion para cambiar de un modo a otro
+            function cambiarModoColor (){
+              body.classList.toggle("darkMode")
+
+              if(body.classList.contains ("darkMode")){
+                colorModeButton.innerText = "Ligth Mode"
+              }else{
+                colorModeButton.innerText = "Dark Mode"
+              }
+              
+            }
+            //---------------------DOM------------------------------
 
 
         

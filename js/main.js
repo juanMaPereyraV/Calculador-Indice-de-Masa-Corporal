@@ -1,17 +1,12 @@
-           
-      
-     
-            //Petición de datos al usuario (sexo, altura, peso)
-            
-            
-  
 
-           
-            
-            
             //Función para calcular el índice de masa corporal (IMC)
-            function CalcularIMC(sexo, altura, peso) 
+            function CalcularIMC() 
             {
+              //Petición de datos al usuario DOM (sexo, altura, peso)
+              let sexo = document.getElementById ("sexo").value
+              let altura = document.getElementById ("altura").value
+              let peso = document.getElementById ("peso").value
+
               //La función Math.roud sirve para redondear valores
               altura = Math.round(altura) / 100;
               peso = Math.round(peso);
@@ -59,23 +54,21 @@
                   break
                 default:
                   resultado = "No se ha podido calcular. No ha indicado h (hombre) o m (mujer).";
+                 
               }
               //Con toFixed reduciremos a 2 el número de decimales a mostrar
-              return "Su IMC es: " + indice.toFixed(2) + " y su clasificación es: " + resultado;
+               alert ("Su IMC es: " + indice.toFixed(2) + " y su clasificación es: " + resultado)
             }
        
             //Función para mostrar el resultado por pantalla
-            function MostrarResultadoIMC (sexo, altura, peso, indice)
+            function MostrarResultadoIMC (altura, peso, indice)
             {
               let mensaje = "Usted mide " + altura / 100 + " metros y pesa " + peso + " Kg. \n \n " + indice;
               alert (mensaje);
             }	
        
-            //Llamamos a las funciones anteriores para el cálculo y para mostrar los resultados
-            let resultado = CalcularIMC(sexo, altura, peso);
-            MostrarResultadoIMC(sexo, altura, peso, resultado);  
           
-            //--------------------------------------------------------------------------------
+            //-----------------------------------METODOS DE ARRAY--------------------------------------------------
 
             //funcion para ver la totalidad del array
             function busqueda (str){
@@ -143,7 +136,6 @@
               }
               
             }
-            //---------------------DOM------------------------------
 
 
         

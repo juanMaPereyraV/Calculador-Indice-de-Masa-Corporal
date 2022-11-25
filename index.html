@@ -15,7 +15,7 @@
     <div class ="container">
     <button id = "color-mode" class ="btn"> Dark Mode</button>
     </div>
-    <form class="form" id="formulario" onsubmit="CalcularIMC(); return false">
+    <form class="form" id="formulario">
         <label for="sexo">Indique su genero "h" si eres Hombre y "m" si eres mujer</label>
         <br>
         <input type="text" id="sexo">
@@ -28,7 +28,7 @@
         <br>
         <input type="text" id="peso">
         <br>
-        <button type ="submit" class="boton" id="btncalcular" onclick="MostrarResultadoIMC();"> CALCULAR</button>
+        <button class="boton" id="btncalcular" onclick="CalcularIMC();"> CALCULAR</button>
     </form>
     
     <div id="caja"></div>

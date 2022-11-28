@@ -1,44 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saludable.com</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"/>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <title>Indicador de Masa Corporal</title>
-</head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
 
-<body>
-    <h1>Calculador Indice de Masa Corporal</h1>
-    <div class ="container">
-    <button id = "color-mode" class ="btn"> Dark Mode</button>
+  <body class="container-fluid">
+    <!-- NAVBAR BOOTSTRAP navbar-dark bg-dark -->
+    <nav
+      class="navbar navbar-expand-lg fondoNavbar"
+      aria-label="Eighth navbar example"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img class="tamLogo" src="/img/—Pngtree—health-symbol free png picture_4653883.png" alt="Logo Saludable"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarsExample07"
+          aria-controls="navbarsExample07"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fw-bold" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Calcula tu IMC</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Recetas</a>
+            </li>
+          </ul>
+          <form role="search">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Recetas Saludables"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- HERO -->
+    <div class="px-4 text-center fondo">
+      <h1 class="display-5 fw-bold">Vida Saludable</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+          Calcula tu índice de masa coorporal y recibí consejos de los mejores
+          profesionales
+        </p>
+        <div class ="container">
+            <button id = "color-mode" class ="btn"> Dark Mode</button>
+            </div>
+      </div>
     </div>
-    <form class="form" id="formulario">
-        <label for="sexo">Indique su genero "h" si eres Hombre y "m" si eres mujer</label>
-        <br>
-        <input type="text" id="sexo">
-        <br>
-        <label for="altura">Escribe tu ALTURA actual (cm):</label>
-        <br>
-        <input type="text" id="altura">
-        <br>
-        <label for="peso">Escribe tu PESO actual (kg):</label>
-        <br>
-        <input type="text" id="peso">
-        <br>
-        <button class="boton" id="btncalcular" onclick="CalcularIMC();"> CALCULAR</button>
-    </form>
-    
-    <div id="caja"></div>
-    <p id ="Parrafo"></p>
-    <footer>
-    <div id="nuevocontenido" style="width: 15rem;"></div>
-    </footer>
 
+    <!-- ROW -->
+
+    <div class="formu justify-content-sm-center">
+      <h2 class="text-center">Calcular tu IMC</h2>
+      <p class="text-center">
+        Verificá tu estado físico de manera <strong>gratuita</strong> y recibí
+        por e-mail los mejores consejos
+      </p>
+      <form class="col-xl-6 col-md-12" id="formulario">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" />
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="email" required />
+        <label for="peso" class="form-label">Peso</label>
+        <input type="number" class="form-control" id="peso" />
+        <label for="altura" class="form-label">Altura</label>
+        <input type="number" class="form-control" id="altura" />
+        <button type="submit" class="btn colorBoton my-2">Calcular</button>
+      </form>
+      <div class="col-xl-6 col-md-12">
+        <img class="img-fluid rounded" src="img/ejercicio.jpg" alt="" />
+      </div>
+    </div>
+    <!-- MUESTRO LOS DATOS -->
+    <div class="row">
+      <div class="col-12 text-center mensaje" id="infoUsuarios"></div>
+    </div>
+    <div class="tabla">
+    <img src="https://www.doctorjosevicenteferrer.com/wp-content/uploads/2013/10/tabla-IMC-624x411.png" alt="tabla">
+    <h3>Entre 18 y 24 : NORMOPESO</h3>
+    <h3>Entre 25 y 29 : SOBREPESO</h3>
+    <h3>Entre 30 y 36 : OBESIDAD</h3>
+    <h3>Entre 35 y 40 : OBESIDAD SEVERA</h3>
+    </div>  
     <script src="js/db.js"></script>
-    <script src="js/main.js"></script>
-</body>
-
+    <script src="js/app.js"></script>
+    
+  </body>
 </html>

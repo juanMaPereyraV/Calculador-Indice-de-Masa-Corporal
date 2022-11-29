@@ -98,12 +98,6 @@ class Persona {
               
             }
 
-
-        
-           
-
-            
-
             
 
 

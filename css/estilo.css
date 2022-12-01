@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.tamLogo{
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
@@ -84,6 +88,10 @@ h1 {
   background: black;
 }
 
+.btn:hover{
+  background-color: #ffffff;
+}
+
 .mensaje{
   font-size: 30px;
   font-weight: 700;
@@ -112,6 +120,7 @@ h1 {
 
 .grafico{
   margin-bottom: 15px;
+  max-width: 100%;
 }
 
 .btn-flotante {

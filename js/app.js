@@ -55,6 +55,19 @@ class Persona {
     resultado.innerHTML = aux;
   };
 
+    // const botonAdmin = document.getElementById('admin');
+    // const datosAdmin = document.getElementById('datosAdmin');
+
+    // botonAdmin.addEventListener('click', () => {
+    //     const personas = JSON.parse(localStorage.getItem('Persona'));
+    //     let aux = '';
+    //     personas.forEach((persona) => {
+    //     aux += `<p class="resultado"> Nombre ${persona.nombre} </p> 
+    //             <p class="resultado"> Correo Electrónico: ${persona.email} </p> <hr>`;
+    // });
+    //     datosAdmin.innerHTML = aux;
+    // });
+
 
   //-----------------------------------METODOS DE ARRAY--------------------------------------------------
 
@@ -97,9 +110,5 @@ class Persona {
               }
               
             }
-
-            
-
-
             
             

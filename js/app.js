@@ -1,4 +1,3 @@
-
 //Crear clases:
 class Persona {
     constructor(nombre, email, peso, altura) {
@@ -55,18 +54,7 @@ class Persona {
     resultado.innerHTML = aux;
   };
 
-    // const botonAdmin = document.getElementById('admin');
-    // const datosAdmin = document.getElementById('datosAdmin');
 
-    // botonAdmin.addEventListener('click', () => {
-    //     const personas = JSON.parse(localStorage.getItem('Persona'));
-    //     let aux = '';
-    //     personas.forEach((persona) => {
-    //     aux += `<p class="resultado"> Nombre ${persona.nombre} </p> 
-    //             <p class="resultado"> Correo Electrónico: ${persona.email} </p> <hr>`;
-    // });
-    //     datosAdmin.innerHTML = aux;
-    // });
 
 
   //-----------------------------------METODOS DE ARRAY--------------------------------------------------
@@ -74,22 +62,22 @@ class Persona {
             //funcion para ver la totalidad del array
             function busqueda (str){
                 resultadosIMG.forEach (resultadoIMG =>{
-                  //console.log (`${resultadoIMG.id} ${resultadoIMG.frase} ${resultadoIMG.foto}`);
+                  return (`${resultadoIMG.id} ${resultadoIMG.frase} ${resultadoIMG.foto}`);
                 });
             }
             busqueda (resultadosIMG)
 
             // metodo find para saber si un elemento esta o no en el objeto del array
             resultadosIMG.find((elemento , indice , array)=>{
-                //console.log (elemento)
-                //console.log (indice)
-                //console.log (array)
+                return (elemento)
+                return (indice)
+                return (array)
             })
 
 
             // metodo de filter para ver si hay parametros dentro del objeto para
             const filtrado = resultadosIMG.filter (leyenda => leyenda.frase == ("Obesidad."))
-            //console.log (filtrado)
+            
 
     //-------------------------- APLICAR EVENTOS---------------------------------------------------------
 
@@ -110,5 +98,48 @@ class Persona {
               }
               
             }
+    //--------------------------------------USO DE FETCH y consumir Datos de un Json----------------------------
+
+
+            const render = (libros) =>{
+  
+              const contenidoJson = document.querySelector ("#contenidoJson")
+
+              let html = ""
+
+              libros.forEach (libros =>{
+                const {nombre, autor, link} = libros
+              })
+
+              html += `
+              <p> nombre: ${libros.nombre} </p>
+              <p> autor: ${libros.autor} </p>
+              <p> link: ${libros.link} </p>
+              <hr>`
+
+              contenidoJson.innerHTML = html
+            }
             
+
+
+            const ObtenerDatosJson = ()=> {
+              fetch ("./data/data.json")
+              .then ((respuesta) =>{
+                return respuesta.json()
+              })
+                
+              .then ((datos)=> {
+                render (datos)
+                console.log (datos)
+              })
+                
+              document.querySelector ("#contenidoJson").textContent = datos ()
+              .catch ((error)=>{
+                console.log (error)
+              })
+            }
+
+            const btnJson = document.querySelector ("#btnJson")
+
+            btnJson.addEventListener ("click", ObtenerDatosJson)
             

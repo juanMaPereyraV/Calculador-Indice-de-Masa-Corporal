@@ -1,0 +1,32 @@
+[
+    {
+    "Id": 1,
+   "nombre": "No comas como un Zombie",
+   "autor": "HarperCollins",
+   "link": "href = http://https://www.womenshealthmag.com/es/adelgazar-perder-peso/g26961107/dieta-adelgazar-mejores-libros/#product-460b926b-230c-494f-95c5-b764d1c02853-anchor"
+    },
+    { 
+   "Id": 2,
+   "nombre": "A comer se aprende: Alimentación sana para tu día a día",
+   "autor": "Planeta",
+   "link": "href = https://www.amazon.es/dp/840818475X?linkCode=ogi&tag=womensspain-21&ascsubtag=[artid|2153.g.26961107[src|[ch|"
+    },
+    { 
+   "Id": 3,
+   "nombre": "Comer bien es fácil si sabes cómo (Prácticos)",
+   "autor": "Editorial Planeta",
+   "link": "href = https://www.amazon.es/dp/8408237217?linkCode=ogi&tag=womensspain-21&ascsubtag=[artid|2153.g.26961107[src|[ch|"
+    },
+    {
+   "Id": 4,
+   "nombre": "Dime qué comes y te diré qué bacterias tienes: El intestino, nuestro segundo cerebro",
+   "autor": "GRIJALBO ILUSTRADOS",
+   "link": "href = https://www.amazon.es/dp/8417752927?linkCode=ogi&tag=womensspain-21&ascsubtag=[artid|2153.g.26961107[src|[ch|"
+    },
+    {
+   "Id": 5,
+   "nombre": "Nutrición emocional: Una nueva forma de entender la alimentación y conseguir tu peso ideal (Sin colección)",
+   "autor": "Alienta Editorial",
+   "link": "href = https://www.amazon.es/dp/8413440106?linkCode=ogi&tag=womensspain-21&ascsubtag=[artid|2153.g.26961107[src|[ch|"
+    }
+]

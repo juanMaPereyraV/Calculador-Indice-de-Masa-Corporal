@@ -100,6 +100,8 @@ class Persona {
             }
     //--------------------------------------USO DE FETCH y consumir Datos de un Json----------------------------
 
+            
+
 
             const render = (libros) =>{
   
@@ -109,37 +111,36 @@ class Persona {
 
               libros.forEach (libros =>{
                 const {nombre, autor, link} = libros
+
+                html += `
+                <p> nombre: ${libros.nombre} </p>
+                <p> autor: ${libros.autor} </p>
+                <a href="http"> link: ${libros.link} </a>
+                <hr>`
+  
+                contenidoJson.innerHTML = html
+            
               })
 
-              html += `
-              <p> nombre: ${libros.nombre} </p>
-              <p> autor: ${libros.autor} </p>
-              <p> link: ${libros.link} </p>
-              <hr>`
-
-              contenidoJson.innerHTML = html
             }
             
-
-
-            const ObtenerDatosJson = ()=> {
-              fetch ("./data/data.json")
-              .then ((respuesta) =>{
-                return respuesta.json()
-              })
-                
-              .then ((datos)=> {
-                render (datos)
-                console.log (datos)
-              })
-                
-              document.querySelector ("#contenidoJson").textContent = datos ()
-              .catch ((error)=>{
-                console.log (error)
-              })
-            }
-
-            const btnJson = document.querySelector ("#btnJson")
-
-            btnJson.addEventListener ("click", ObtenerDatosJson)
+                        const ObtenerDatosJson = ()=> {
+                          fetch ("./data/data.json")
+                          .then ((respuesta) =>{
+                            return respuesta.json()
+                          })
+                            
+                          .then ((datos)=> {
+                            render (datos)
+                            console.log (datos)
+                          })
+                            
+                          //document.querySelector ("#contenidoJson").textContent = datos ()
+                          .catch ((error)=>{
+                            console.log (error)
+                          })
+                        }
             
+                        const btnJson = document.querySelector ("#btnJson")
+            
+                        btnJson.addEventListener ("click", ObtenerDatosJson)

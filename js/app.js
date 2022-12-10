@@ -110,12 +110,13 @@ class Persona {
               let html = ""
 
               libros.forEach (libros =>{
-                const {nombre, autor, link} = libros
+                const {foto, nombre, autor, link} = libros
 
                 html += `
-                <p> nombre: ${libros.nombre} </p>
-                <p> autor: ${libros.autor} </p>
-                <a href="http"> link: ${libros.link} </a>
+                <img class= "imglibros" src="${libros.foto}" alt=""></img>
+                <p style="text-align:center"> Nombre: ${libros.nombre} </p>
+                <p style="text-align:center"> Autor: ${libros.autor} </p>
+                <a style="text-align:center" href= ${libros.link}> Sigue el Link para comprar el Libro! </a>
                 <hr>`
   
                 contenidoJson.innerHTML = html
@@ -144,3 +145,6 @@ class Persona {
                         const btnJson = document.querySelector ("#btnJson")
             
                         btnJson.addEventListener ("click", ObtenerDatosJson)
+
+
+

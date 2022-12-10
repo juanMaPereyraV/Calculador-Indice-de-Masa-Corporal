@@ -164,3 +164,33 @@ h1 {
 
 
 } 
+
+#contenidoJson{
+  background: black;
+  color: white;
+  border-radius: 23px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  font-style: italic;
+  width: auto;
+  width: 50%;
+  margin-bottom: 25px;
+}
+
+.imglibros{
+  width: 30%;
+  margin-left: 35%;
+}
+
+a{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+}
+
+p{
+  padding: 10px;
+}

@@ -1,4 +1,4 @@
-            //Array de objeto que muestra el resultado con foto
+            //array para los metodos de busqueda y filtrado
             const resultadosIMG = [
                 { 
                     id: 1,

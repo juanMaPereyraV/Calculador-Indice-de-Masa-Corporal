@@ -72,13 +72,13 @@
   </p>
   <form class="col-xl-6 col-md-12" id="formulario">
     <label for="nombre" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="nombre" />
+    <input type="text" class="form-control" id="nombre" required />
     <label for="email" class="form-label">Correo Electrónico</label>
     <input type="email" class="form-control" id="email" required />
-    <label for="peso" class="form-label">Peso</label>
-    <input type="number" class="form-control" id="peso" />
-    <label for="altura" class="form-label">Altura</label>
-    <input type="number" class="form-control" id="altura" />
+    <label for="peso" class="form-label">Peso (sin decimales)</label>
+    <input type="number" class="form-control" id="peso" required />
+    <label for="altura" class="form-label">Altura (Sin decimales)</label>
+    <input type="number" class="form-control" id="altura" required />
     <button type="submit" class="btn colorBoton my-2">Calcular</button>
   </form>
 </div>
